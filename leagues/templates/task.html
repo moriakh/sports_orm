@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Authors & Books</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <h1>Women's Leagues</h1>
+            {% for women in womens%}
+                <li>{{women.name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>Baseballs's Leagues</h1>
+            {% for baseball in baseballs%}
+                <li>{{baseball.name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>Hockeys's Leagues</h1>
+            {% for hockey in hockeys%}
+                <li>{{hockey.name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>No Footballs's Leagues</h1>
+            {% for no_football in no_footballs%}
+                <li>{{no_football.name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>Conferences's Leagues</h1>
+            {% for conference in conferences%}
+                <li>{{conference.name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>Atlantics's Leagues</h1>
+            {% for atlantic in atlantics%}
+                <li>{{atlantic.name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>Dallas's Teams</h1>
+            {% for dallas in dallass%}
+                <li>{{dallas.team_name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>Raptor's Teams</h1>
+            {% for raptor in raptors%}
+                <li>{{raptor.team_name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>Cities Teams</h1>
+            {% for city in cities%}
+                <li>{{city.team_name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>T's Teams</h1>
+            {% for t in startswithts%}
+                <li>{{t.team_name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>All Teams</h1>
+            {% for team in locationss%}
+                <li>{{team.team_name}} - {{team.location}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>All Teams</h1>
+            {% for team in teams%}
+                <li>{{team.team_name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>Cooper Player</h1>
+            {% for cooper in coopers%}
+                <li>{{cooper.first_name}} - {{cooper.last_name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>Joshua Player</h1>
+            {% for joshua in joshuas%}
+                <li>{{joshua.first_name}} - {{joshua.last_name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>No-Joshua Player</h1>
+            {% for no_joshua in no_joshuas%}
+                <li>{{no_joshua.first_name}} - {{no_joshua.last_name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>Wyatt or Alexander Player</h1>
+            {% for name in names%}
+                <li>{{name.first_name}} - {{name.last_name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+    </div>
+</body>
+</html>
