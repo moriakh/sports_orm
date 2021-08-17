@@ -12,8 +12,89 @@
 <body>
     <div class="container">
         <div class="row mt-5">
-            {{atlantic_teams}}
+            <h1>Atlantic's Players</h1>
+            {% for atlantic in atlantic_teams%}
+                <li>{{atlantic.first_name}}</li>
+            {% endfor %}
         </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>Boston Penguin's Players</h1>
+            {% for boston_penguin in boston_penguins%}
+                <li>{{boston_penguin.first_name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>International Collegiate's Players</h1>
+            {% for international in international_collegiate%}
+                <li>{{international.first_name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>Lopez's Players</h1>
+            {% for lope in lopez%}
+                <li>{{lope.first_name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>Football's Players</h1>
+            {% for football_player in football_players%}
+                <li>{{football_player.first_name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>Sophia's Teams</h1>
+            {% for team_sophi in team_sophia%}
+                <li>{{team_sophi.name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>Flores's Players</h1>
+            {% for flore in flores%}
+                <li>{{flore.name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>Samuel Evans</h1>
+            {% for samuel_evan in samuel_evans%}
+                <li>{{samuel_evan.name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>Not now Wichita's Players</h1>
+            {% for not_now_wichit in not_now_wichita%}
+                <li>{{not_now_wichit.name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>Jacob's Teams</h1>
+            {% for jacob_gra in jacob_gray%}
+                <li>{{jacob_gra.name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>Joshua's Players</h1>
+            {% for joshua in joshuas%}
+                <li>{{joshua.first_name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
+        <div class="row mt-5">
+            <h1>All Players that...</h1>
+            {% for all_player in all_players%}
+                <li>{{all_player.first_name}}</li>
+            {% endfor %}
+        </div>
+        <hr>
     </div>
 </body>
 </html>
