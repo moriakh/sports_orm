@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.db.models import Count
 from .models import League, Team, Player
 
 from . import team_maker
@@ -56,6 +57,8 @@ def task2(request):
 
 	# Player.objects.filter(all_teams__team_name='Vikings', all_teams__location='Wichita').exclude(curr_team__team_name='Vikings', curr_team__location='Wichita')
 
+	teams12 = Team.objects.filter(all_players__count__gte=12).filter(curr_players__count__gte=12)
+
 	context = {
 		'atlantic_teams' : atlantic_teams,
 		'boston_penguins' : Player.objects.filter(curr_team__team_name='Boston Penguins'),
@@ -67,7 +70,9 @@ def task2(request):
 		'flores' : Player.objects.filter(last_name="Flores").exclude(curr_team__team_name="Roughriders", curr_team__location="Washington"),
 		'samuel_evans' : Team.objects.filter(all_players__first_name="Samuel", all_players__last_name="Evans"),
 		'not_now_wichita' : not_now_wichita,
-		
-
+		'jacob_gray' : Team.objects.filter(all_players_first_name = "Jacob", all_players_last_name = "Gray").exclude(name="Colt", location="Oregon"),
+		'joshuas' : Player.objects.filter(first_name = "Joshua", curr_team__leagues__name="Atlantic Baseball Players Federation	"),
+		'team12' :  [],
+		'all_players' : Player.objects.annotate(Count('all_teams')).order_by('all_teams__count')
 	}
 	return render(request, "task2.html", context)
